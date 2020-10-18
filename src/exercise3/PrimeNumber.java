@@ -7,13 +7,14 @@ public class PrimeNumber {
 
         int num = input.nextInt();
         int divider = 2;
-        boolean prime = true;
+        boolean prime = false;
 
         while (n>divider){
           if(num%divider==0){
             prime = false;
             break;
           }
+          prime = true;
           divider++;
           }
 
