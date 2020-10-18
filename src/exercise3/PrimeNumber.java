@@ -1,19 +1,26 @@
 package exercise3;
-
 import java.util.Scanner;
-
 public class PrimeNumber {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        int n = input.nextInt();
-        while (n>2){
-          
-        }
-        } 
+        int num = input.nextInt();
+        int divider = 2;
+        boolean prime = true;
 
-        System.out.println("End");
+        while (n>divider){
+          if(num%divider==0){
+            prime = false;
+            break;
+          }
+          divider++;
+          }
+
+          System.out.println("Prime number: " + prime);
+         
+
+      
     }
 
 }
