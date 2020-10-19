@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class AngleCalculation{
   public static void main(String[] args){
     Scanner input = input.nextDouble();
-    double angle = input.nextDouble();
+    double angle = 0;
     char type = input.next().charAt(0);
     do{
        if(type=='r'){
