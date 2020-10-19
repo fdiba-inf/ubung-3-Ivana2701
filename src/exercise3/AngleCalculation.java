@@ -7,12 +7,12 @@ public class AngleCalculation{
     char type = input.next().charAt(0);
     do{
        if(type=='r'){
-        double a=180.0*value/Math.PI;
-        System.out.print("Angle: "+a+"d");
+        double angle=180.0*value/Math.PI;
+        System.out.print("Angle: "+angle+"d");
       }
       else{
-        double a=value*Math.PI/180.0;
-        System.out.print("Angle: "+a+"r");
+        double angle=value*Math.PI/180.0;
+        System.out.print("Angle: "+angle+"r");
       }
     }
     while(type == 'r' || 'd');
