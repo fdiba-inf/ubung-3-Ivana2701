@@ -1,20 +1,30 @@
-package exersice3;
+package exercise3;
 import java.util.Scanner;
+import java.lang.Math;
 public class AngleCalculation{
   public static void main(String[] args){
-    Scanner input = input.nextDouble();
-    double angle = 0;
-    char type = input.next().charAt(0);
+
+    Scanner input = new Scanner(System.in);
+    double angle;
+    char unit;
+
     do{
-       if(type=='r'){
-        double angle=180.0*value/Math.PI;
-        System.out.print("Angle: "+angle+"d");
+      
+        System.out.print("Enter angle: ");
+        angle = input.nextDouble();
+        System.out.print("Enter unit: ");
+        String symbole = input.next();
+        unit = symbole.charAt(0);
+
+       if(unit=='r'){
+        double newAngle=angle / Math.PI * 180;
+        System.out.print("Angle: "+newAngle+"d");
       }
-      else{
-        double angle=value*Math.PI/180.0;
-        System.out.print("Angle: "+angle+"r");
+      else if(unit=='d'){
+        double newAngle=angle * Math.PI / 180;
+        System.out.print("Angle: "+newAngle+"r");
       }
     }
-    while(type == 'r' || 'd');
+    while(unit == 'r' || unit == 'd');
   }
 }
