@@ -4,27 +4,36 @@ import java.lang.Math;
 public class Triangle{
   public static void main(String[] args){
 Scanner input = new Scanner(System.in);
-double a = input.nextDouble();
-double b = input.nextDouble();
-double c = input.nextDouble();
+double a;
+double b;
+double c;
 
-if(a>=0 && b>=0 && c>=0 && a+b>c && a+c>b && b+c>a){
+do{
+  System.out.println("Enter triangle sides: ");
+  a = input.nextDouble();
+  b = input.nextDouble();
+  c = input.nextDouble();
+  boolean condition = a>0 && b>0 && c>0 && a+b>c && a+c>b && b+c>a;
+  
+  if(condition){
   double s = (a+b+c)/2;
-  double area = Math.sqrt(s*(s-a)*(s-b)*(s-c)) ;
+  double area = Math.sqrt(s*(s-a)*(s-b)*(s-c));
 System.out.println("Area: " + area);
-if(a==b && b==c && c==a){
+if(a==b && b==c){
           System.out.println("Triangle: equilateral");  
         }
         else if(a==b||b==c||c==a){
           System.out.println("Triangle: isosceles");
         }
-        else{
+        else {
           System.out.println("Triangle: scalene");
         }
-        else{
-          System.out.println("Values are not correct!");
-          break;
-        }
   }
-}
+      else{
+          System.out.println("Values are not correct!");
+          }
+}     
+    while (a > 0 && b > 0 && c > 0);
+
+  }
 }
